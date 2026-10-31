@@ -10,10 +10,27 @@
 <body>
   <main class="app">
     <h1>Weather App</h1>
-    <div class="search">
+    <form class="search">
       <input type="text" placeholder="Type a city name" aria-label="City name">
-      <button type="button">Search</button>
-    </div>
+      <button type="submit">Search</button>
+    </form>
+    <p class="message" id="message" role="status"></p>
+    <section class="result" id="result" hidden>
+      <div class="place">
+        <h2 id="place"></h2>
+        <p class="time" id="time"></p>
+      </div>
+      <p class="temp" id="temp"></p>
+      <div class="visual">
+        <img class="icon" id="icon" alt="" width="64" height="64">
+        <p class="desc" id="desc"></p>
+      </div>
+      <ul class="details">
+        <li><span>Feels like</span><b id="feels"></b></li>
+        <li><span>Humidity</span><b id="humidity"></b></li>
+        <li><span>Wind</span><b id="wind"></b></li>
+      </ul>
+    </section>
   </main>
   <script src="script.js"></script>
 </body>
