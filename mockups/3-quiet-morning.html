@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup 3: Quiet Morning</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:24px 16px 64px;background:#e8edf2;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#223}
+.intro,.state{max-width:1400px;margin:0 auto}
+.intro{margin-bottom:28px}
+.intro .vt{margin:0 0 6px;font-size:1.5rem}
+.intro p{margin:0;color:#556;line-height:1.5}
+.state{margin-bottom:44px}
+.state .vt2{margin:0 0 12px;font-size:1.1rem}
+.pair{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.cap{margin:0 0 6px;font-size:.8rem;color:#667}
+.phone{width:375px;max-width:100%;border:10px solid #1f2933;border-radius:36px;overflow:hidden}
+.laptop{width:940px;max-width:100%;border:10px solid #1f2933;border-bottom-width:24px;border-radius:14px 14px 6px 6px;overflow:hidden}
+.screen{container-type:inline-size;min-height:640px}
+.laptop .screen{min-height:520px}
+/* drawn weather picture (sun + cloud), made from CSS shapes */
+.art{position:relative;width:10em;height:8em;margin:0 auto;font-size:16px}
+.sun{position:absolute;display:block;width:4.4em;height:4.4em;top:.4em;right:1.2em;border-radius:50%}
+.sun::before{content:"";position:absolute;inset:-.9em;border-radius:50%}
+.cloud{position:absolute;display:block;left:.3em;bottom:.4em;width:7.5em;height:2.75em;border-radius:2.75em}
+.cloud::before,.cloud::after{content:"";position:absolute;border-radius:50%;background:inherit}
+.cloud::before{width:3.5em;height:3.5em;left:1.1em;top:-1.75em}
+.cloud::after{width:4.4em;height:4.4em;left:3.1em;top:-2.4em}
+.result{display:grid}
+.place{grid-area:place}.temp{grid-area:temp}.visual{grid-area:visual}.details{grid-area:details}
+.details{list-style:none;margin:0;padding:0}
+.app h1,.app h2{font-weight:400}
+@container (min-width:700px){.art{font-size:22px}}
+
+.screen{background:#fff;padding:36px 22px;color:#2a4a6b;
+ font-family:'Indie Flower','Segoe Print','Bradley Hand','Comic Sans MS',cursive}
+.laptop .screen{padding:56px 72px}
+.app{width:100%;max-width:520px}
+.app h1{margin:0 0 28px;font-size:2.1rem;color:#4a90d9;letter-spacing:.02em}
+.search{display:flex;gap:16px;align-items:flex-end}
+.search input{flex:1;min-width:0;font:inherit;font-size:1.25rem;padding:8px 2px;color:inherit;background:transparent;
+ border:0;border-bottom:2px solid #c9dff5;outline:0;border-radius:0}
+.search input::placeholder{color:#9db9d6}
+.search button{font:inherit;font-size:1.1rem;padding:8px 20px;color:#4a90d9;background:#fff;border:1.5px solid #4a90d9;border-radius:999px}
+.msg{margin:40px 0 0;font-size:1.4rem;color:#4a90d9}
+.notfound{padding-left:16px;border-left:3px solid #4a90d9;color:#2a4a6b}
+.result{gap:6px 24px;margin-top:40px;grid-template-areas:"place" "temp" "visual" "details"}
+.place h2{margin:0;font-size:1.5rem}
+.time{margin:2px 0 0;font-size:1rem;color:#7391b0}
+.temp{margin:4px 0 0;font-size:6.5rem;line-height:1.05;color:#4a90d9}
+.visual{display:flex;align-items:center;gap:16px;margin:4px 0 12px}
+.art{margin:0;font-size:12px}
+.desc{margin:0;font-size:1.3rem}
+.details{display:flex;margin-top:12px;border-top:1px solid #dce9f6;padding-top:16px}
+.details li{flex:1;display:flex;flex-direction:column;gap:2px;padding:0 10px;border-left:1px solid #dce9f6;font-size:.95rem}
+.details li:first-child{padding-left:0;border-left:0}
+.details span{color:#7391b0}
+.details b{font-weight:400;font-size:1.1rem}
+.sun{background:transparent;border:2px solid #4a90d9}
+.sun::before{display:none}
+.cloud{background:#fff;filter:drop-shadow(1.5px 0 0 #4a90d9) drop-shadow(-1.5px 0 0 #4a90d9) drop-shadow(0 1.5px 0 #4a90d9) drop-shadow(0 -1.5px 0 #4a90d9)}
+@container (min-width:700px){
+ .app{max-width:760px}
+ .app h1{font-size:2.6rem}
+ .result{grid-template-columns:1.2fr 1fr;grid-template-areas:"place visual" "temp visual" "details details";align-items:start}
+ .visual{flex-direction:column;align-items:flex-start;justify-self:end;margin:0}
+ .art{font-size:20px}
+ .temp{font-size:9rem}
+ .details li{padding:0 24px;font-size:1.1rem}
+ .details b{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+<header class="intro"><h1 class="vt">Mockup 3: Quiet Morning</h1>
+<p>Almost all white with one calm blue, lots of space, thin delicate handwriting and a tiny line-drawn cloud. This is a design picture only: nothing on it works yet.</p></header>
+<section class="state"><h2 class="vt2">1. Before searching</h2><div class="pair"><div><p class="cap">Phone size</p><div class="phone"><div class="screen"><div class="app"><h1>Weather App</h1><div class="search"><input type="text" placeholder="Type a city name" value="" aria-label="City name"><button type="button">Search</button></div></div></div></div></div><div><p class="cap">Laptop size</p><div class="laptop"><div class="screen"><div class="app"><h1>Weather App</h1><div class="search"><input type="text" placeholder="Type a city name" value="" aria-label="City name"><button type="button">Search</button></div></div></div></div></div></div></section><section class="state"><h2 class="vt2">2. Loading</h2><div class="pair"><div><p class="cap">Phone size</p><div class="phone"><div class="screen"><div class="app"><h1>Weather App</h1><div class="search"><input type="text" placeholder="Type a city name" value="London" aria-label="City name"><button type="button">Search</button></div><p class="msg">Loading...</p></div></div></div></div><div><p class="cap">Laptop size</p><div class="laptop"><div class="screen"><div class="app"><h1>Weather App</h1><div class="search"><input type="text" placeholder="Type a city name" value="London" aria-label="City name"><button type="button">Search</button></div><p class="msg">Loading...</p></div></div></div></div></div></section><section class="state"><h2 class="vt2">3. Weather result (made-up values)</h2><div class="pair"><div><p class="cap">Phone size</p><div class="phone"><div class="screen"><div class="app"><h1>Weather App</h1><div class="search"><input type="text" placeholder="Type a city name" value="London" aria-label="City name"><button type="button">Search</button></div><section class="result"><div class="place"><h2>London, United Kingdom</h2><p class="time">Saturday 31 October, 14:30</p></div><p class="temp">24&deg;C</p><div class="visual"><div class="art" aria-hidden="true"><i class="sun"></i><i class="cloud"></i></div><p class="desc">Partly cloudy</p></div><ul class="details"><li><span>Feels like</span><b>26&deg;C</b></li><li><span>Humidity</span><b>62%</b></li><li><span>Wind</span><b>15 km/h NW</b></li></ul></section></div></div></div></div><div><p class="cap">Laptop size</p><div class="laptop"><div class="screen"><div class="app"><h1>Weather App</h1><div class="search"><input type="text" placeholder="Type a city name" value="London" aria-label="City name"><button type="button">Search</button></div><section class="result"><div class="place"><h2>London, United Kingdom</h2><p class="time">Saturday 31 October, 14:30</p></div><p class="temp">24&deg;C</p><div class="visual"><div class="art" aria-hidden="true"><i class="sun"></i><i class="cloud"></i></div><p class="desc">Partly cloudy</p></div><ul class="details"><li><span>Feels like</span><b>26&deg;C</b></li><li><span>Humidity</span><b>62%</b></li><li><span>Wind</span><b>15 km/h NW</b></li></ul></section></div></div></div></div></div></section><section class="state"><h2 class="vt2">4. City not found</h2><div class="pair"><div><p class="cap">Phone size</p><div class="phone"><div class="screen"><div class="app"><h1>Weather App</h1><div class="search"><input type="text" placeholder="Type a city name" value="Londno" aria-label="City name"><button type="button">Search</button></div><p class="msg notfound">Hmm, I couldn't find that city. Please check the spelling and try again.</p></div></div></div></div><div><p class="cap">Laptop size</p><div class="laptop"><div class="screen"><div class="app"><h1>Weather App</h1><div class="search"><input type="text" placeholder="Type a city name" value="Londno" aria-label="City name"><button type="button">Search</button></div><p class="msg notfound">Hmm, I couldn't find that city. Please check the spelling and try again.</p></div></div></div></div></div></section>
+</body>
+</html>
