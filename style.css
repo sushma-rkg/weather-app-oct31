@@ -7,9 +7,9 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
-  padding: 36px 22px;
+  padding: 25vh 22px 36px;
   background: #fff;
   color: #2a4a6b;
   font-family: 'Indie Flower', 'Segoe Print', 'Bradley Hand', 'Comic Sans MS', cursive;
@@ -165,7 +165,7 @@ body {
 
 @media (min-width: 700px) {
   body {
-    padding: 56px 72px;
+    padding: 25vh 72px 56px;
   }
 
   .app {
